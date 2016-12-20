@@ -21,6 +21,7 @@ or directly import to Contentful, creating a new space and using your data to po
 ## Requirements
 
 * Ruby
+* [Bundler](http://bundler.io)
 * A Relational Database
 
 ## Installation
@@ -68,7 +69,7 @@ end
 
 Contentful::DatabaseImporter.setup do |config|
   config.space_name = 'My Cool New Space'
-  config.database_connection = 'postgres://user:pass@host:port'
+  config.database_connection = 'postgres://user:pass@host:port/database'
 end
 
 Contentful::DatabaseImporter.run!
